@@ -1,4 +1,5 @@
 import { ref } from 'vue';
+import { assetUrl } from './assets';
 
 const savedLanguage = typeof window !== 'undefined' ? window.localStorage.getItem('sdg-language') : null;
 
@@ -464,7 +465,7 @@ export const noteLabel = (note) => translate(note);
 export const noteImage = (note) => {
   const translated = translations[note] || note;
   const slug = noteImages[translated] || 'default';
-  return `/images/notes/${slug}.jpg`;
+  return assetUrl(`images/notes/${slug}.jpg`);
 };
 
 export const noteVisualClass = (note) => visualClassByNote[note] || 'default';

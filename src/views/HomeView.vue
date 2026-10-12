@@ -9,6 +9,7 @@ import {
   perfumes,
 } from '../data/perfumes';
 import { t, translate } from '../i18n';
+import { assetUrl } from '../assets';
 
 const activeCollection = ref('Все');
 const accordScroller = ref(null);
@@ -38,15 +39,15 @@ const scrollAccords = (direction) => {
         <p class="quiet-line">{{ t('heroLine') }}</p>
         <h1>{{ t('heroTitle') }}</h1>
         <p class="hero-copy">{{ t('heroCopy') }}</p>
-        <a class="gold-button booking-button hero-cta" href="#perfumes">
+        <RouterLink class="gold-button booking-button hero-cta" to="/#perfumes">
           <span>{{ t('viewPerfumes') }}</span>
           <span aria-hidden="true">→</span>
-        </a>
+        </RouterLink>
       </div>
 
       <div class="hero-display">
         <div class="hero-glow"></div>
-        <img class="hero-scene-image" src="/images/perfumes/floruits-hero-scene.png" :alt="heroPerfume.title" />
+        <img class="hero-scene-image" :src="assetUrl('images/perfumes/floruits-hero-scene.png')" :alt="heroPerfume.title" />
       </div>
     </section>
 
@@ -137,7 +138,7 @@ const scrollAccords = (direction) => {
         <p class="quiet-line">{{ t('showcase') }}</p>
         <h2>{{ newestCount }} {{ t('newReleases') }}</h2>
         <p>{{ t('neoCopy') }}</p>
-        <a class="text-link product-strip-link" href="#perfumes">{{ t('viewPerfumes') }}</a>
+        <RouterLink class="text-link product-strip-link" to="/#perfumes">{{ t('viewPerfumes') }}</RouterLink>
       </div>
       <div class="product-release-row" :aria-label="`${newestCount} ${t('newReleases')}`">
         <RouterLink

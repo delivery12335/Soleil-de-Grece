@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import App from './App.vue';
 import HomeView from './views/HomeView.vue';
 import InfoPageView from './views/InfoPageView.vue';
@@ -7,7 +7,9 @@ import PerfumeView from './views/PerfumeView.vue';
 import './styles.css';
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: import.meta.env.MODE === 'github-pages'
+    ? createWebHashHistory(import.meta.env.BASE_URL)
+    : createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to) {
     if (to.hash) {
       return { el: to.hash, top: 0 };

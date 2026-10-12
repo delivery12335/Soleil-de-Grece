@@ -20,9 +20,9 @@ const menuOpen = ref(false);
     </button>
 
     <nav :class="['main-nav', { open: menuOpen }]">
-      <a href="/#perfumes" @click="menuOpen = false">{{ t('aromas') }}</a>
-      <a href="/#accords" @click="menuOpen = false">{{ t('accords') }}</a>
-      <a href="/#contacts" @click="menuOpen = false">{{ t('contacts') }}</a>
+      <RouterLink to="/#perfumes" @click="menuOpen = false">{{ t('aromas') }}</RouterLink>
+      <RouterLink to="/#accords" @click="menuOpen = false">{{ t('accords') }}</RouterLink>
+      <RouterLink to="/#contacts" @click="menuOpen = false">{{ t('contacts') }}</RouterLink>
       <div class="language-switch" aria-label="Language">
         <button type="button" :class="{ active: currentLanguage === 'ru' }" @click="setLanguage('ru')">RU</button>
         <button type="button" :class="{ active: currentLanguage === 'en' }" @click="setLanguage('en')">EN</button>

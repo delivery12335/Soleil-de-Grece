@@ -1,3 +1,5 @@
+import { assetUrl } from '../assets';
+
 export const phone = '+373 688 42 987';
 export const phoneHref = 'tel:+37368842987';
 export const whatsappHref = 'https://wa.me/37368842987';
@@ -9,19 +11,19 @@ export const parfumoUrl = 'https://www.parfumo.com/Perfumes/soleil-de-grace';
 export const officialBrandUrl = 'https://soleildegrace.com';
 
 export const contactLinks = [
-  { id: 'facebook', label: 'Facebook', icon: '/images/social/facebook.png', href: facebookUrl },
-  { id: 'instagram', label: 'Instagram', icon: '/images/social/instagram.png', href: instagramUrl },
-  { id: 'fragrantica', label: 'Fragrantica', icon: '/images/social/fragrantica.png', href: fragranticaDesignerUrl },
-  { id: 'parfumo', label: 'Parfumo', icon: '/images/social/parfumo.png', href: parfumoUrl },
-  { id: 'whatsapp', label: 'WhatsApp', icon: '/images/social/whatsapp.png', href: whatsappHref },
+  { id: 'facebook', label: 'Facebook', icon: assetUrl('images/social/facebook.png'), href: facebookUrl },
+  { id: 'instagram', label: 'Instagram', icon: assetUrl('images/social/instagram.png'), href: instagramUrl },
+  { id: 'fragrantica', label: 'Fragrantica', icon: assetUrl('images/social/fragrantica.png'), href: fragranticaDesignerUrl },
+  { id: 'parfumo', label: 'Parfumo', icon: assetUrl('images/social/parfumo.png'), href: parfumoUrl },
+  { id: 'whatsapp', label: 'WhatsApp', icon: assetUrl('images/social/whatsapp.png'), href: whatsappHref },
 ];
 
 export const informationLinks = [
   { id: 'about', label: { ru: 'О бренде', en: 'About Us' }, href: '/about-us' },
 ];
 
-const perfumeImage = (name) => `/images/perfumes/${name}.png`;
-const perfumeHeroImage = (name) => `/images/perfumes/${name}.png`;
+const perfumeImage = (name) => assetUrl(`images/perfumes/${name}.png`);
+const perfumeHeroImage = (name) => assetUrl(`images/perfumes/${name}.png`);
 
 export const collections = ['Все', 'NÉO Collection', 'The Origins Collection'];
 
