@@ -35,8 +35,8 @@
 Для локальной работы используйте **Node.js 22 LTS** и npm.
 
 ```bash
-git clone https://github.com/delivery12335/Soleil-de-Gr-ce.git
-cd Soleil-de-Gr-ce
+git clone https://github.com/delivery12335/Soleil-de-Grece.git
+cd Soleil-de-Grece
 npm ci
 npm run dev
 ```
